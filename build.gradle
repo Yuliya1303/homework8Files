@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'org.jetbrains:annotations:20.1.0'
+    implementation 'org.jetbrains:annotations:20.1.0'
+
+    testImplementation(
+            "com.codeborne:selenide:6.3.5",
+            "org.junit.jupiter:junit-jupiter:5.8.2",
+            "org.slf4j:slf4j-simple:1.7.36"
+    )
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "chromeoptions.prefs",
+            "intl.accept)languages=en"
+}
